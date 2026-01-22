@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Cyber Incident Analysis Portal</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        form { max-width: 600px; margin: auto; }
+        label { display: block; margin-top: 10px; }
+        textarea, input { width: 100%; padding: 8px; }
+        button { margin-top: 20px; padding: 10px; background: #007bff; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>AI Cyber Incident Analysis Portal</h1>
+    <p>Submit incident details for AI-powered analysis.</p>
+    <form method="post">
+        <label for="description">Incident Description:</label>
+        <textarea name="description" id="description" rows="4" required></textarea>
+
+        <label for="affected_systems">Affected Systems/Assets:</label>
+        <textarea name="affected_systems" id="affected_systems" rows="3" required></textarea>
+
+        <label for="iocs">Indicators of Compromise (IOCs):</label>
+        <textarea name="iocs" id="iocs" rows="3"></textarea>
+
+        <label for="timeline">Timeline:</label>
+        <textarea name="timeline" id="timeline" rows="3"></textarea>
+
+        <label for="logs">Logs/Evidence:</label>
+        <textarea name="logs" id="logs" rows="3"></textarea>
+
+        <button type="submit">Analyze Incident</button>
+    </form>
+</body>
+</html>

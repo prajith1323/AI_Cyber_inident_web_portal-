@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Analysis Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .result { max-width: 800px; margin: auto; }
+        h2 { color: #333; }
+        ul { list-style-type: disc; margin-left: 20px; }
+        a { display: inline-block; margin-top: 20px; padding: 10px; background: #28a745; color: white; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h1>Incident Analysis Result</h1>
+    <div class="result">
+        <h2>Attack Type</h2>
+        <p>{{ analysis.attack_type }}</p>
+
+        <h2>Severity Level</h2>
+        <p>{{ analysis.severity }}</p>
+
+        <h2>Risk Score</h2>
+        <p>{{ analysis.risk_score }}/100</p>
+
+        <h2>Possible Impact</h2>
+        <p>{{ analysis.impact }}</p>
+
+        <h2>Immediate Actions</h2>
+        <ul>
+            {% for action in analysis.immediate_actions %}
+            <li>{{ action }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Preventive Measures</h2>
+        <ul>
+            {% for measure in analysis.preventive_measures %}
+            <li>{{ measure }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <a href="/">Analyze Another Incident</a>
+</body>
+</html>
